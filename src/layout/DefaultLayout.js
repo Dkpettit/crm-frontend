@@ -5,7 +5,7 @@ import { Header } from "./partials/Header.comp";
 export const DefaultLayout = ({children}) => {
     return (
       <div className="default-layout">
-        <header className="header mb-50">
+        <header className="header mb-2">
           <Header />
         </header>
         <div className="main">{children}</div>

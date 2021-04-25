@@ -21,7 +21,11 @@ function App() {
   return (
     <div className="App">
       {/* <Entry /> */}
-      <DefaultLayout />
+      <DefaultLayout>
+
+        //Dashboard
+
+      </DefaultLayout>
     </div>
   );
 }

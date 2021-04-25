@@ -14,7 +14,7 @@
 
 import './App.css';
 
-import { Entry } from './page/entry/Entry.page';
+import { Entry } from './pages/entry/Entry.page';
 
 function App() {
   return (

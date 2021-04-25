@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "status":"Client response pending",
+        "addedAt": "2021/03/31"
+    },
+    {
+        "id":2,
+        "status":"Closed",
+        "addedAt": "2021/04/01"
+    },
+    {
+        "id":3,
+        "status":"Waiting for follow-up",
+        "addedAt": "2021/03/31"
+    },
+    {
+        "id":4,
+        "status":"Client response pending",
+        "addedAt": "2021/03/31"
+    },
+    {
+        "id":5,
+        "status":"Closed",
+        "addedAt": "2021/04/01"
+    },
+    {
+        "id":6,
+        "status":"Waiting for follow-up",
+        "addedAt": "2021/03/31"
+    }
+]

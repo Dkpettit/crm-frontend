@@ -18,6 +18,7 @@ import { Dashboard } from './pages/Dashboard/Dashboard.page';
 import {AddTicket} from './pages/new-ticket/AddTicket.page'
 
 import { Entry } from './pages/entry/Entry.page';
+import { TicketLists } from './pages/ticket-list/TicketList.page';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <Entry /> */}
       <DefaultLayout>
         {/* <Dashboard /> */}
-        <AddTicket />
+        {/* <AddTicket /> */} 
+        <TicketLists />
       </DefaultLayout>
     </div>
   );

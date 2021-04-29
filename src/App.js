@@ -19,6 +19,7 @@ import {AddTicket} from './pages/new-ticket/AddTicket.page'
 
 import { Entry } from './pages/entry/Entry.page';
 import { TicketLists } from './pages/ticket-list/TicketList.page';
+import { Ticket } from './pages/ticket/Ticket.page';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       <DefaultLayout>
         {/* <Dashboard /> */}
         {/* <AddTicket /> */} 
-        <TicketLists />
+        {/* <TicketLists /> */}
+        <Ticket />
       </DefaultLayout>
     </div>
   );

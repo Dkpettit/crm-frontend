@@ -3,7 +3,24 @@
         "id":1,
         "subject":"test",
         "status":"Client response pending",
-        "addedAt": "2021/03/31"
+        "addedAt": "2021/03/31",
+        "history": [
+            {
+                "date":"20-10-10",
+                "message":"this is a message",
+                "messageBy":"Dave"            
+            },
+            {
+                "date":"20-10-10",
+                "message":"this is a message",
+                "messageBy":"Me"            
+            },
+            {
+                "date":"20-10-10",
+                "message":"this is a message",
+                "messageBy":"You"            
+            }
+        ]
     },
     {
         "id":2,

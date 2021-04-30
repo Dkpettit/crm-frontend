@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import tickets from '../../assets/data/dummy-tickets.json';
@@ -8,6 +8,23 @@ import { UpdateTicket } from '../../components/update-ticket/UpdateTicket.comp';
 const ticket = tickets[0];
 export const Ticket = () =>
 {
+  const [message, setMessage] = useState('');
+
+  useEffect(() =>
+  {
+    
+  },[message])
+
+  const handleOnChange = (e) =>
+  {
+    setMessage(e.target.value);
+  };
+
+  const handleOnSubmit = (e) =>
+  {
+    alert('Form submitted...');
+  };
+
     return (
       <Container>
         <Row>
@@ -33,7 +50,7 @@ export const Ticket = () =>
         <hr />
         <Row>
           <Col>
-            <UpdateTicket />
+            <UpdateTicket msg={message} handleOnChange={handleOnChange} handleOnSubmit={handleOnSubmit} />
           </Col>
         </Row>
       </Container>

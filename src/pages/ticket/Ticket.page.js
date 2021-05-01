@@ -5,15 +5,28 @@ import tickets from '../../assets/data/dummy-tickets.json';
 import { MessageHistory } from '../../components/message-history/MessageHistory.comp';
 import { UpdateTicket } from '../../components/update-ticket/UpdateTicket.comp';
 
-const ticket = tickets[0];
+
+import { useParams } from 'react-router-dom';
+import { array } from 'prop-types';
+
+// const ticket = tickets[0];
 export const Ticket = () =>
 {
+  const { tId } = useParams();
   const [message, setMessage] = useState('');
+  const [ticket, setTicket] = useState('');
+
 
   useEffect(() =>
   {
     
-  },[message])
+    for (let i = 0; i < tickets.length; i++) {
+      if (tickets[i].id == tId) {
+        setTicket(tickets[i]);
+        continue;
+      }
+    }
+  },[message, tId])
 
   const handleOnChange = (e) =>
   {
@@ -43,14 +56,16 @@ export const Ticket = () =>
           </Col>
         </Row>
         <Row className="mt-4">
-          <Col>
-            <MessageHistory msg={ticket.history} />
-          </Col>
+          <Col>{ticket.history && <MessageHistory msg={ticket.history} />}</Col>
         </Row>
         <hr />
         <Row>
           <Col>
-            <UpdateTicket msg={message} handleOnChange={handleOnChange} handleOnSubmit={handleOnSubmit} />
+            <UpdateTicket
+              msg={message}
+              handleOnChange={handleOnChange}
+              handleOnSubmit={handleOnSubmit}
+            />
           </Col>
         </Row>
       </Container>

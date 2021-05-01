@@ -21,6 +21,7 @@ import { Entry } from './pages/entry/Entry.page';
 import { TicketLists } from './pages/ticket-list/TicketList.page';
 import { Ticket } from './pages/ticket/Ticket.page';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { PrivateRoute } from './components/private-route/PrivateRoute.comp';
 
 function App() {
   return (
@@ -30,20 +31,18 @@ function App() {
           <Route exact path="/">
             <Entry />
           </Route>
-          <DefaultLayout>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </Route>
-            <Route path="/add-ticket">
+            </PrivateRoute>
+            <PrivateRoute path="/add-ticket">
               <AddTicket />
-            </Route>
-            <Route path="/tickets">
+            </PrivateRoute>
+            <PrivateRoute path="/tickets">
               <TicketLists />
-            </Route>
-            <Route path="/ticket/:tid">
+            </PrivateRoute>
+            <PrivateRoute path="/ticket/:tId">
               <Ticket />
-            </Route>
-          </DefaultLayout>
+            </PrivateRoute>
         </Switch>
       </Router>
     </div>
